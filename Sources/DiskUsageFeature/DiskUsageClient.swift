@@ -1,10 +1,12 @@
-import ActivityLog
 import AppKit
 import Dependencies
 import DependenciesMacros
 import Foundation
 import UniformTypeIdentifiers
 
+/// What the section asks of the system. A host that keeps a log of what the app did (Bridge
+/// Commander's activity log) wraps `moveToTrash` and `deletePermanently` with its own, through
+/// the store's `withDependencies`.
 @DependencyClient
 public struct DiskUsageClient: Sendable {
 	public var volumes: @Sendable () -> [DiskVolume] = { [] }
@@ -33,20 +35,14 @@ extension DiskUsageClient: DependencyKey {
 			}
 		},
 		moveToTrash: { url in
-			try await ActivityLog.shared.recordingErrors("Move to Trash \(url.path(percentEncoded: false))") {
-				try await Task.detached(priority: .utility) {
-					try FileManager.default.trashItem(at: url, resultingItemURL: nil)
-				}.value
-			}
-			ActivityLog.shared.record(.app, "Moved to Trash: \(url.path(percentEncoded: false))")
+			try await Task.detached(priority: .utility) {
+				try FileManager.default.trashItem(at: url, resultingItemURL: nil)
+			}.value
 		},
 		deletePermanently: { url in
-			try await ActivityLog.shared.recordingErrors("Delete \(url.path(percentEncoded: false))") {
-				try await Task.detached(priority: .utility) {
-					try FileManager.default.removeItem(at: url)
-				}.value
-			}
-			ActivityLog.shared.record(.app, "Deleted: \(url.path(percentEncoded: false))")
+			try await Task.detached(priority: .utility) {
+				try FileManager.default.removeItem(at: url)
+			}.value
 		},
 		showInFinder: { url in
 			NSWorkspace.shared.activateFileViewerSelecting([url])

@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26617E4D52BBE8506760775A /* DiskHorizonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D983738A17C123CBFB7B /* DiskHorizonApp.swift */; };
+		8EE7DF608E7C6DC36BCA4DB6 /* UpdateSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2A697A86DE10F01D036BFD /* UpdateSettingsView.swift */; };
+		C900C3DB0A1C1ED76B07B5C2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233BBB11AEA4B4049650511C /* SettingsView.swift */; };
+		CA0BE420471F2972A88B0EAD /* DiskUsageFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 47539034E82A0DE0AA94AE0C /* DiskUsageFeature */; };
+		CD5A24AF3A933826FE7EF051 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 82084276C235608C4E2849BE /* Sparkle */; };
+		FBF9BCFAB076E6E72FC7918A /* CheckForUpdatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86665CE5B9B45654341DCA /* CheckForUpdatesView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		233BBB11AEA4B4049650511C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		58D353A2C5D544DE98CA7779 /* DiskHorizon-mac-app */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "DiskHorizon-mac-app"; path = ..; sourceTree = SOURCE_ROOT; };
+		6FDB09CF94FEF19E11DA5A92 /* DiskHorizon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiskHorizon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D10D983738A17C123CBFB7B /* DiskHorizonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskHorizonApp.swift; sourceTree = "<group>"; };
+		AB2A697A86DE10F01D036BFD /* UpdateSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSettingsView.swift; sourceTree = "<group>"; };
+		CC86665CE5B9B45654341DCA /* CheckForUpdatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckForUpdatesView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F455C69091C2ABE902CD39F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0BE420471F2972A88B0EAD /* DiskUsageFeature in Frameworks */,
+				CD5A24AF3A933826FE7EF051 /* Sparkle in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E8B2469E36618360B2B87D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FDB09CF94FEF19E11DA5A92 /* DiskHorizon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BD309DE1A2745EB1E9EC769 = {
+			isa = PBXGroup;
+			children = (
+				EE5145CAA3DDC9774536A1F6 /* DiskHorizon */,
+				E5BF5879D70E8963239BE889 /* Packages */,
+				1E8B2469E36618360B2B87D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E5BF5879D70E8963239BE889 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				58D353A2C5D544DE98CA7779 /* DiskHorizon-mac-app */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		EE5145CAA3DDC9774536A1F6 /* DiskHorizon */ = {
+			isa = PBXGroup;
+			children = (
+				CC86665CE5B9B45654341DCA /* CheckForUpdatesView.swift */,
+				8D10D983738A17C123CBFB7B /* DiskHorizonApp.swift */,
+				233BBB11AEA4B4049650511C /* SettingsView.swift */,
+				AB2A697A86DE10F01D036BFD /* UpdateSettingsView.swift */,
+			);
+			path = DiskHorizon;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0AACE75ACFDEF7DBD54E7A9 /* DiskHorizon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FB86692BBD1F27B9159ED0D /* Build configuration list for PBXNativeTarget "DiskHorizon" */;
+			buildPhases = (
+				39D80FE2654F1A344AA5CE41 /* Sources */,
+				F455C69091C2ABE902CD39F4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DiskHorizon;
+			packageProductDependencies = (
+				47539034E82A0DE0AA94AE0C /* DiskUsageFeature */,
+				82084276C235608C4E2849BE /* Sparkle */,
+			);
+			productName = DiskHorizon;
+			productReference = 6FDB09CF94FEF19E11DA5A92 /* DiskHorizon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16267E5B4DC608173EE0344D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					F0AACE75ACFDEF7DBD54E7A9 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6D9F2E95A9CBD077174A834B /* Build configuration list for PBXProject "DiskHorizon" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 3BD309DE1A2745EB1E9EC769;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E559550619878938CAA5065D /* XCRemoteSwiftPackageReference "Sparkle" */,
+				735A2986FF803A1095FBF1E9 /* XCLocalSwiftPackageReference ".." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1E8B2469E36618360B2B87D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0AACE75ACFDEF7DBD54E7A9 /* DiskHorizon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39D80FE2654F1A344AA5CE41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBF9BCFAB076E6E72FC7918A /* CheckForUpdatesView.swift in Sources */,
+				26617E4D52BBE8506760775A /* DiskHorizonApp.swift in Sources */,
+				C900C3DB0A1C1ED76B07B5C2 /* SettingsView.swift in Sources */,
+				8EE7DF608E7C6DC36BCA4DB6 /* UpdateSettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		393C89938CE6E6BCA70C619A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = "$(MARKETING_VERSION)";
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DiskHorizon/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DiskHorizon;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinstrambach.DiskHorizon;
+				PRODUCT_MODULE_NAME = DiskHorizon;
+				PRODUCT_NAME = DiskHorizon;
+				SDKROOT = macosx;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		860C6C52093849FB1F68654F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		93F2110D9AB8986DACEA5A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BFF63628B192E56915E9D683 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDebug;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = "$(MARKETING_VERSION)";
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DiskHorizon/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DiskHorizon Debug";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinstrambach.DiskHorizon.debug;
+				PRODUCT_MODULE_NAME = DiskHorizon;
+				PRODUCT_NAME = DiskHorizon;
+				SDKROOT = macosx;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D9F2E95A9CBD077174A834B /* Build configuration list for PBXProject "DiskHorizon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				860C6C52093849FB1F68654F /* Debug */,
+				93F2110D9AB8986DACEA5A93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8FB86692BBD1F27B9159ED0D /* Build configuration list for PBXNativeTarget "DiskHorizon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFF63628B192E56915E9D683 /* Debug */,
+				393C89938CE6E6BCA70C619A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		735A2986FF803A1095FBF1E9 /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E559550619878938CAA5065D /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		47539034E82A0DE0AA94AE0C /* DiskUsageFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DiskUsageFeature;
+		};
+		82084276C235608C4E2849BE /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E559550619878938CAA5065D /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 16267E5B4DC608173EE0344D /* Project object */;
+}

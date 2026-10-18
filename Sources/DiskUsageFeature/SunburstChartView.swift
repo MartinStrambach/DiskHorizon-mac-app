@@ -1,5 +1,4 @@
 import AppKit
-import AppUI
 import SwiftUI
 
 /// The sunburst: the folder on screen at the centre, its contents in rings around it, largest

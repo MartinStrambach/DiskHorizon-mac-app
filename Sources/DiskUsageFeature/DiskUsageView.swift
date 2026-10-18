@@ -1,5 +1,4 @@
 import AppKit
-import AppUI
 import ComposableArchitecture
 import QuickLook
 import SwiftUI

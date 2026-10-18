@@ -1,0 +1,64 @@
+# Generates DiskHorizon.xcodeproj: `xcodegen` from this directory after changing this file.
+# The generated project is committed, so building needs no xcodegen.
+name: DiskHorizon
+options:
+  bundleIdPrefix: com.martinstrambach
+  deploymentTarget:
+    macOS: "26.0"
+  createIntermediateGroups: true
+packages:
+  DiskHorizon:
+    path: ..
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle
+    majorVersion: 2.10.0
+targets:
+  DiskHorizon:
+    type: application
+    platform: macOS
+    sources:
+      - path: DiskHorizon
+        excludes:
+          - Info.plist
+    dependencies:
+      - package: DiskHorizon
+        product: DiskUsageFeature
+      - package: Sparkle
+    scheme: {}
+    settings:
+      base:
+        PRODUCT_NAME: DiskHorizon
+        PRODUCT_MODULE_NAME: DiskHorizon
+        PRODUCT_BUNDLE_IDENTIFIER: com.martinstrambach.DiskHorizon
+        # The release version, also the tag `make publish` creates — which is the package's
+        # SwiftPM version too, so app and package share one version line.
+        MARKETING_VERSION: 0.1.0
+        # CFBundleVersion: Sparkle compares versions by it, so it follows MARKETING_VERSION.
+        CURRENT_PROJECT_VERSION: $(MARKETING_VERSION)
+        GENERATE_INFOPLIST_FILE: YES
+        # Merged over the generated plist: only the Sparkle keys, which have no INFOPLIST_KEY_.
+        INFOPLIST_FILE: DiskHorizon/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        INFOPLIST_KEY_CFBundleDisplayName: DiskHorizon
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
+        INFOPLIST_KEY_NSHumanReadableCopyright: ""
+        SWIFT_VERSION: 6.0
+        SWIFT_TREAT_WARNINGS_AS_ERRORS: YES
+        SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY: YES
+        ENABLE_HARDENED_RUNTIME: YES
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_IDENTITY: "-"
+        # Not sandboxed, like Bridge Commander: a scan reads the whole disk, and removing an item
+        # moves or deletes it wherever it is.
+        ENABLE_APP_SANDBOX: NO
+        ENABLE_USER_SCRIPT_SANDBOXING: YES
+        DEAD_CODE_STRIPPING: YES
+      configs:
+        # A debug build is its own app, as in Bridge Commander: its own user defaults and
+        # Application Support folder (named by the bundle identifier), so a debug run never
+        # touches the release app's starred folders. Its icon carries a "DEBUG" ribbon
+        # (scripts/make-icon.swift draws both).
+        Debug:
+          PRODUCT_BUNDLE_IDENTIFIER: com.martinstrambach.DiskHorizon.debug
+          INFOPLIST_KEY_CFBundleDisplayName: DiskHorizon Debug
+          ASSETCATALOG_COMPILER_APPICON_NAME: AppIconDebug
