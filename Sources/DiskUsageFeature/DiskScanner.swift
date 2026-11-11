@@ -336,6 +336,10 @@ nonisolated struct ScanWorker {
 	let tally: ScanTally
 
 	func run() {
+		// A dataless folder (iCloud Drive with Optimize Mac Storage, Dropbox, OneDrive, …) is
+		// skipped by `DirectoryWalker`; should one be read anyway, it fails here at once instead
+		// of the thread waiting, possibly for ever, for its File Provider to download the listing.
+		setiopolicy_np(IOPOL_TYPE_VFS_MATERIALIZE_DATALESS_FILES, IOPOL_SCOPE_THREAD, IOPOL_MATERIALIZE_DATALESS_FILES_OFF)
 		let walker = DirectoryWalker(tally: tally) { [queue] in queue.isCancelled }
 		while let item = queue.next() {
 			read(item, with: walker)
@@ -436,8 +440,8 @@ nonisolated final class DirectoryWalker {
 		buffer.deallocate()
 	}
 
-	/// Reads one open directory: the names of its subfolders still to be read (mount points and
-	/// empty folders left out, firmlinks kept), and its files and empty subfolders as nodes, the
+	/// Reads one open directory: the names of its subfolders still to be read (mount points,
+	/// empty and dataless folders left out, firmlinks kept), and its files and empty subfolders as nodes, the
 	/// smaller files summed. Does not close the directory.
 	///
 	/// Entries are parsed by the attributes each reports as returned rather than at fixed
@@ -493,6 +497,12 @@ nonisolated final class DirectoryWalker {
 					let isFirmlink = flags & UInt32(SF_FIRMLINK) != 0
 					if isFirmlink {
 						listing.subdirectories.append(name)
+					}
+					else if flags & UInt32(SF_DATALESS) != 0 {
+						// Its contents are in the cloud, not on this disk. Reading it would have the
+						// kernel wait for the File Provider to fetch the listing, which hung scans
+						// with Full Disk Access (2026-11-11), and would download it on the user's disk.
+						listing.leafNodes.append(DiskNode(name: name, kind: .directory, size: 0, itemCount: 0))
 					}
 					else if mountStatus & UInt32(DIR_MNTSTATUS_MNTPOINT) != 0 {
 						// Another volume: not entered, like `du -x`.
